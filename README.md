@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Documentation of My Watch List
+
+### Add tags in document head
+We are using [react-helmet](https://github.com/nfl/react-helmet) package to add `title` and `meta` tag in document head.
+
+- It is recommended to add title in every page in **pages** folder
+- Change the title and meta description from your index.html file in the public folder
+
+### Icons
+- public/favicon.ico
+- public/logo192.png
+- public/logo512.png
+
+### Pages
+All the pages are in `src/pages`
