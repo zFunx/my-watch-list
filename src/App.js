@@ -1,11 +1,11 @@
 import './App.css';
 
+import Movie from './pages/Movie/Movie';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        My watch list
-      </header>
+      <Movie />
     </div>
   );
 }
