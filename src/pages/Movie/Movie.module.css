@@ -1,49 +1,95 @@
-.header {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
-  }
-  
-.header a {
+.container-2{
+    border-radius: 25px;
+    display:flex;
+    justify-content:space-between;
+    background-color:wheat;
+    border:1px #ccc solid;
+    padding:20 px;
+    }
+.c-1{
+    background-color:seagreen;
+    border-radius: 25px;
+    flex:1;
+    border:1px #ccc solid;
+    padding:30 px;
+    }
+.c-2{
+    background-color:seagreen;
+    border-radius: 25px;
+    flex:2;
+    border:1px #ccc solid;
+    padding:20 px;
+    }
+
+
+.topnav {
+    display: flex;
+    align-content: center;
+    background-color: #e9e9e9;
+    }
+    
+    .topnav a {
     float: left;
+    display: block;
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
-}
-
-.header a:hover {
-background-color: #ddd;
-color: black;
-}
-
-.header-right {
-float: right;
-}
-
-@media screen and (max-width: 500px) {
-.header a {
-    float: none;
-    display: block;
-    text-align: left;
-}
-}
-.header-right {
-    float: none;
-}
-.header-right .search-container{
-    float:right;
-}
-.header-right .search-container button{
-    float:left;
+    font-size: 17px;
+    }
+    
+    .topnav a:hover {
+    background-color: #ddd;
+  
+    }
+    
+    .topnav a.active {
+    background-color:seagreen;
+    color: white;
+    }
+    
+    .topnav .searchContainer {
+    float: right;
+    }
+    
+    .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    }
+    
+    .topnav .searchContainer button {
+    float: right;
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
     background: #ddd;
     font-size: 17px;
     border: none;
-    cursor: pointer;    
+    cursor: pointer;
+    }
+    
+    .topnav .searchContainer button:hover {
+    background: #ccc;
+    }
+    
+    @media screen and (max-width: 600px) {
+    .topnav .searchContainer {
+        float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .searchContainer button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;  
+    }
+}
+.searchContainer{
+    float:right;
 }
