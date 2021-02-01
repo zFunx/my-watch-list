@@ -3,14 +3,13 @@ import classes from './Footer.module.css';
 class Footer extends Component {
     render() {
         return (
-
             <footer class="footer">
-                <div class={classes.footerList}>
-                    <a href="#" class="footerLink">Home</a>
-                    <a href="#" class="footerLink" >Trending</a>
-                    <a href="#" class="footerLink">New</a>
-                    <a href="#" class="footerLink">Contact us</a>
-                </div>                
+                <div class={classes.foot}>
+                    <a href="#contact">Home</a>
+                    <a href="#about">Trending</a>
+                    <a href="#contact">New In</a>
+                    <a href="#contact">Home</a>
+                </div>        
           </footer>
         )
     }
