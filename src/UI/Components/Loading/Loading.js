@@ -7,6 +7,7 @@ class Loading extends Component {
                 <h1 class={classes.twirl} ></h1>
                 <h2>LOADING...</h2>
             </div>
+
         )
     }
 }

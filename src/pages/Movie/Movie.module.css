@@ -3,14 +3,25 @@
     font-weight: bold;
 }
 l:hover{
-    background-color: #4db6ac;
+    background-color: #37474f;
     border-radius: 25px;
+}
+l b:hover{
+    color: #b0bec5;
 }
 table{
     text-align: left;
 }
-#table2{
-    background-color: black;
+.table1{
+    display:flex;
+    align-content: stretch;
+}
+.table1 th:nth-child(1){
+    
+}
+.table1 th:nth-child(2,3,4)
+{
+    flex:1;
 }
 .container2{
     margin:20px;
@@ -20,7 +31,8 @@ table{
 
     }
 .container3{
-    margin:20px;
+    font-size: large;
+    margin:25px;
     display:flex;
     flex-direction:column;
     width:100%;
@@ -50,19 +62,34 @@ table{
     flex:1;
     background-color: #b0bec5;
 }
+.c2 p, .container4 h3,p, .container5 h3,p, .c3 h3,tr{
+    margin:15px;
+}
+.table2 tr, .container4 h2,p, .container5 h2,p
+{
+    margin:15px;
+    color: black;
+}
+.table2 th:nth-child(1){
+    transform: rotate(270deg);
+    text-align: center;
+}
 .c3{
     flex:1;
     border-radius: 25px;
     margin:5px;
- 
     background-color: #b0bec5;
 }
 
 img{
-    float:absolute;
-    border-radius: 25px;
-}
 
+    border-radius: 20px;
+}
+img:hover{
+    border-radius: 4px;
+    font-weight: normal;
+    background-color: #607d8b;
+}
 .topnav {
     margin:16px;
     border-radius: 25px;
@@ -93,8 +120,9 @@ img{
     }
     
     .topnav a:hover {
-    background-color: #4db6ac;
+    background-color: #37474f;
     border-radius: 25px;
+    color: #b0bec5;
   
     }
     
@@ -122,7 +150,7 @@ img{
     margin-right: 16px;
     background: #607d8b ;
     font-size: 17px;
-    border: 2px black;
+    border: 2px red;
     cursor: pointer;
     color: black;
     }

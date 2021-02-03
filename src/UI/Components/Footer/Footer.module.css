@@ -18,8 +18,9 @@
   }
   
   .foot a:hover {
-  background-color: #ddd;
+  background-color: #37474f;
   border-radius: 25px;
+  color:#b0bec5;
 
   }
   
