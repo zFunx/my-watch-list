@@ -1,0 +1,163 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: black;
+}
+* h2,p{
+    text-align: center;
+}
+l:hover{
+    background-color: #37474f;
+    border-radius: 25px;
+}
+l b:hover{
+    color: #b0bec5;
+}
+table{
+    text-align: left;
+}
+.table1{
+    display:flex;
+    align-content: stretch;
+}
+.container2{
+    margin:20px;
+    border-radius: 25px;
+    padding:20 px;
+    display: flex;
+
+    }
+.container3{
+    font-size: large;
+    margin:25px;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    
+}
+.container4{
+    margin:39px;
+    display:flex;
+    flex-direction: column;
+    background-color: #b0bec5 ;
+    border-radius: 25px;
+}
+.container5{
+    margin:39px;
+    display:flex;
+    flex-direction: column;
+    background-color: #b0bec5;
+    border-radius: 25px;
+}
+.c1{
+    flex:1;
+
+}
+.c2{
+    border-radius: 25px;
+    margin:5px;
+    flex:1;
+    background-color: #b0bec5;
+}
+.c2 p, .container4 h3,p, .container5 h3,p, .c3 h3,tr{
+    margin:15px;
+}
+.table2 tr, .container4 h2,p, .container5 h2,p, .c3 h2
+{
+    margin:15px;
+    color: black;
+}
+.table2 th:nth-child(1){
+    transform: rotate(270deg);
+    text-align: center;
+}
+.c3{
+    flex:1;
+    border-radius: 25px;
+    margin:5px;
+    background-color: #b0bec5;
+}
+
+img{
+
+    border-radius: 20px;
+}
+img:hover{
+    border-radius: 4px;
+    font-weight: normal;
+    background-color: #607d8b;
+}
+.topnav {
+    margin:16px;
+    border-radius: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: #90a4ae ;
+    }
+b{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;   
+}
+.topnav a {
+    flex-direction: row;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.topnav a:hover {
+    background-color: #37474f;
+    border-radius: 25px;
+    color: #b0bec5;
+}
+.topnav a.active {
+    color: white;
+}
+.topnav .searchContainer {
+    float: right;
+}
+.topnav input[type=text] {
+    background-color: #eceff1;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 17px;
+}
+.topnav .searchContainer button {
+    margin: 5px;
+    align-self:flex-end;
+    border-radius: 25px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #607d8b ;
+    font-size: 17px;
+    border: 2px red;
+    cursor: pointer;
+    color: black;
+}
+.topnav .searchContainer button:hover {
+    background: #eceff1;
+}
+@media screen and (max-width: 600px) {
+    .topnav .searchContainer {
+        float: none;    
+}
+.topnav a, .topnav input[type=text], .topnav .searchContainer button {
+    float: right;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+}
+  
