@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Info from '../../UI/Components/Info/Info'
+
 import Footer from '../../UI/Components/Footer/Footer.js'
 
 import Loading from '../../UI/Components/Loading/Loading.js'
@@ -75,57 +77,17 @@ class Movie extends Component {
         else {
             return (
                 <React.Fragment>
-                    <div class={classes.container2}>
-                        <div class="c1">
-                            &emsp;&emsp;&emsp;&emsp;<img src="poster.jpg" width="330" height="430" center /> &emsp;
-                            </div>
-                        <div class={classes.container3}>
-                            <div class={classes.c2}>
-                                <table class={classes.table1}>
-                                    <tr>
-                                        <th>
-                                            <h1>{this.state.movie.name}</h1>
-                                            Genres: {this.state.movie.genres.map(genre => genre.name + ' ')}
-                                        </th>
-                                        <th>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://img.icons8.com/android/40/000000/facebook-new.png" /></th>
-                                        <th>&emsp;<img src="https://img.icons8.com/ios-filled/45/000000/instagram-new.png" /></th>
-                                        <th>&emsp;<img src="https://img.icons8.com/ios-glyphs/45/000000/twitter.png" /></th>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class={classes.c3}>
-                                <h2>&ensp;WATCH NOW</h2>
-                                <table class={classes.table2}>
-                                    <tr>
-                                        <th>STREAM</th>
-                                        <th><img src="https://img.icons8.com/fluent-systems-regular/75/000000/netflix-desktop-app.png" /></th>
-                                        <th><img src="https://img.icons8.com/ios/75/000000/amazon-prime-video.png" /></th>
-                                    </tr>
-                                    <tr>
-                                        <th>BUY</th>
-                                        <th><img src="https://img.icons8.com/material-outlined/75/000000/youtube-play--v1.png" /></th>
-                                        <th><img src="https://img.icons8.com/ios/75/000000/apple-tv.png" /></th>
-
-                                    </tr>
-                                    <tr>
-                                        <th>RENT</th>
-                                        <th><img src="https://img.icons8.com/ios/75/000000/apple-tv.png" /></th>
-                                        <th><img src="https://img.icons8.com/material-outlined/75/000000/youtube-play--v1.png" /></th>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <Info />
                     <div class={classes.container4}>
                         <h2>SYNOPSIS</h2>
                         <p>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.</p>
-                        <h2>CAST</h2><br />
-                        <p>Cast of the movie</p>
+                        {/* <h2>CAST</h2><br />
+                        <p>Cast of the movie</p> */}
                     </div>
-                    <div class={classes.container5}>
+                    {/* <div class={classes.container5}>
                         <h2>PEOPLE WHO LIKED AVENGERS:ENDGAME ALSO LIKED<br /></h2>
                         <p>Other movie posters/options</p>
-                    </div>
+                    </div> */}
                     <Footer />
                 </React.Fragment >
             )
