@@ -57,9 +57,10 @@ class Movie extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://afternoon-basin-38506.herokuapp.com/movies', {
+        console.log('code', this.props.match.params.code);
+        axios.get('/movies', {
             params: {
-                code: 'spider-man-homecoming'
+                code: this.props.match.params.code
             }
         })
             .then(res => {
@@ -80,7 +81,7 @@ class Movie extends Component {
                     <Info movie={this.state.movie} />
                     <div class={classes.container4}>
                         <h2>SYNOPSIS</h2>
-                        <p>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.</p>
+                        <p>{this.state.movie.synopsis}</p>
                         {/* <h2>CAST</h2><br />
                         <p>Cast of the movie</p> */}
                     </div>

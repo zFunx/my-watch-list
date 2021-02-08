@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face{
+  font-family: 'Yusei_Magic';
+  src: local('Yusei_Magic'), url(./fonts/Yusei_Magic/Yusei_Magic.ttf) format('truetype');
+}
