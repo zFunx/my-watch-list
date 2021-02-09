@@ -43,10 +43,10 @@ class Watch extends Component {
 
     componentDidMount() {
         // where-to-watches?country.name=India&movie.id={movie-id}
-        console.log('movie id', this.props.movie.id)
+        console.log('movie id', this.props.movieId)
 
         // learn template string in JS
-        axios.get(`/where-to-watches?country.name=India&movie.id=${this.props.movie.id}`)
+        axios.get(`/where-to-watches?country.name=India&movie.id=${this.props.movieId}`)
             // axios.get("/where-to-watches?country.name=India")
             .then(res => {
                 this.setState({ loading: false, platforms: res.data });

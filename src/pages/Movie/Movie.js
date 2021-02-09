@@ -81,8 +81,8 @@ class Movie extends Component {
         else {
             return (
                 <React.Fragment>
-                    <Title />
-                    <Watch />
+                    <Title name={this.state.movie.name} genres={this.state.movie.genres} />
+                    <Watch movieId={this.state.movie.id} />
                     <div class={classes.container4}>
                         <h2>SYNOPSIS</h2>
                         <p>{this.state.movie.synopsis}</p>

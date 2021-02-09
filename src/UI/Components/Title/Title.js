@@ -38,18 +38,18 @@ class Title extends Component {
         loading: true
     }
 
-    componentDidMount() {
-        // where-to-watches?country.name=India&movie.id={movie-id}
-        console.log('movie id', this.props.movie.id)
+    // componentDidMount() {
+    //     // where-to-watches?country.name=India&movie.id={movie-id}
+    //     console.log('movie id', this.props.movie.id)
 
-        // learn template string in JS
-        axios.get(`/where-to-watches?country.name=India&movie.id=${this.props.movie.id}`)
-            // axios.get("/where-to-watches?country.name=India")
-            .then(res => {
-                this.setState({ loading: false, platforms: res.data });
-                console.log('platforms', res.data);
-            })
-    }
+    //     // learn template string in JS
+    //     axios.get(`/where-to-watches?country.name=India&movie.id=${this.props.movie.id}`)
+    //         // axios.get("/where-to-watches?country.name=India")
+    //         .then(res => {
+    //             this.setState({ loading: false, platforms: res.data });
+    //             console.log('platforms', res.data);
+    //         })
+    // }
 
     render() {
         if (!this.state.loading) {
@@ -74,8 +74,8 @@ class Title extends Component {
                             <table class={classes.table1}>
                                 <tr>
                                     <th>
-                                        <h1>{this.props.movie.name}</h1>
-                                    Genres: {this.props.movie.genres.map(genre => genre.name + ' ')}
+                                        <h1>{this.props.name}</h1>
+                                    Genres: {this.props.genres.map(genre => genre.name + ' ')}
                                     </th>
                                     <th>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://img.icons8.com/android/40/000000/facebook-new.png" /></th>
                                     <th>&emsp;<img src="https://img.icons8.com/ios-filled/45/000000/instagram-new.png" /></th>
