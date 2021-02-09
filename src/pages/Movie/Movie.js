@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+
 import axios from 'axios';
 
-import Info from '../../UI/Components/Info/Info'
+import Watch from '../../UI/Components/Watch/Watch.js'
+
+import Title from '../../UI/Components/Title/Title.js'
 
 import Footer from '../../UI/Components/Footer/Footer.js'
 
@@ -78,7 +81,8 @@ class Movie extends Component {
         else {
             return (
                 <React.Fragment>
-                    <Info movie={this.state.movie} />
+                    <Title />
+                    <Watch />
                     <div class={classes.container4}>
                         <h2>SYNOPSIS</h2>
                         <p>{this.state.movie.synopsis}</p>

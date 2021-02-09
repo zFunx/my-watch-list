@@ -5,7 +5,6 @@ import { Route } from 'react-router-dom';
 import Movie from './pages/Movie/Movie';
 import Home from './pages/Home/Home';
 import Navbar from './UI/Components/Navbar/Navbar';
-
 function App() {
   return (
     <div className="App">
