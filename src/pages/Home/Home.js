@@ -6,7 +6,7 @@ import classes from './Home.module.css';
 var button
 
 class Home extends Component {
-     featuredLists = [
+    featuredLists = [
         {
             "id": 1,
             "title": "All Time favourite",
@@ -64,21 +64,25 @@ class Home extends Component {
             ]
         }
     ];
-    
-    state={
-        movies:null,
-        loading:true
+    state = {
+        featuredLists: null,
+        loading: true
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get('/featureds?enabled=1')
             .then(res => {
+                this.setState({ featuredLists: res.data, loading: false });
                 console.log('titles', res.data)
             })
     }
 
-    render(){
-        return( 
+    render() {
+        if (this.state.loading) {
+            return 'Loading...';
+        }
+        else {
+            return (
                 <React.Fragment>
                     {/* <div class={classes.scroll}>
                         <ul class={classes.menu}>
@@ -95,105 +99,22 @@ class Home extends Component {
                         <img  class={classes. img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
                         </button>
                     </div> */}
-                    <h1>{this.state.movies.title}</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button} >
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                    <h1 className='try'></h1>
-                </div>
-                <h1>Trending on Netflix</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button}>
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>
-                <h1>TV shows</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button}>
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>
-                <h1>Sitcoms</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button}>
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>                
-                <h1>Movies</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button}>
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>
-                <h1>Crime</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button} >
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>
-                <h1>Horror</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button}>
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>
-                <h1>What you might have missed</h1>
-                <div class={classes.sec1}>
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
-                    <button className="LeftPaddle" style={button}>
-                        <img  class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                    </button>
-                </div>
+                    {this.state.featuredLists.map(featuredList => (
+                        <React.Fragment>
+                            <h1>{featuredList.title}</h1>
+                            <div class={classes.sec1}>
+                                {featuredList.movies.map(movie => (
+                                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
+                                ))}
+                                <button className="LeftPaddle" style={button}>
+                                    <img class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png" />
+                                </button>
+                            </div>
+                        </React.Fragment>
+                    ))}
                 </React.Fragment>
-        )
+            )
+        }
     }
 }
 export default Home;
