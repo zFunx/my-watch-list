@@ -6,7 +6,7 @@ import classes from './Home.module.css';
 var button
 
 class Home extends Component {
-    featuredLists = [
+     featuredLists = [
         {
             "id": 1,
             "title": "All Time favourite",
@@ -64,11 +64,16 @@ class Home extends Component {
             ]
         }
     ];
+    
+    state={
+        movies:null,
+        loading:true
+    }
 
     componentDidMount(){
         axios.get('/featureds?enabled=1')
             .then(res => {
-                console.log('movies', res.data)
+                console.log('titles', res.data)
             })
     }
 
@@ -90,7 +95,7 @@ class Home extends Component {
                         <img  class={classes. img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
                         </button>
                     </div> */}
-                    <h1>Recently Added</h1>
+                    <h1>{this.state.movies.title}</h1>
                 <div class={classes.sec1}>
                     <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
                     <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
