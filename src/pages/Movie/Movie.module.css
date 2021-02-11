@@ -16,25 +16,6 @@ l b:hover{
 table{
     text-align: left;
 }
-.table1{
-    display:flex;
-    align-content: stretch;
-}
-.container2{
-    margin:20px;
-    border-radius: 25px;
-    padding:20 px;
-    display: flex;
-
-    }
-.container3{
-    font-size: large;
-    margin:25px;
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    
-}
 .container4{
     margin:48px;
     display:flex;
@@ -48,17 +29,7 @@ table{
     flex-direction: column;
     background-color: #b0bec5;
     border-radius: 25px;
-}
-.c1{
-    flex:1;
-    background-color: #607d8b;
-}
-.c2{
-    border-radius: 25px;
-    margin:5px;
-    flex:1;
-    background-color: #b0bec5;
-}
+}   
 .c2 p, .container4 h3,p, .container5 h3,p, .c3 h3,tr{
     margin:15px;
 }

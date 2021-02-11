@@ -4,6 +4,7 @@
     color: black;
 }
 * h2,p{
+    color: black;
     text-align: center;
 }
 .c3 h3,tr{
@@ -22,9 +23,8 @@
     border-bottom: 3px solid black;
 }
 .c3{
-    flex:1;
     border-radius: 25px;
-    margin:5px;
+    margin:48px;
     background-color: #b0bec5;
 }
 

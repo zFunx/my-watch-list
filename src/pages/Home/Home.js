@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
-import classes from './Home.module.css';
+import Loading from '../../UI/Components/Loading/Loading';import classes from './Home.module.css';
 
 var button
 
@@ -79,7 +80,7 @@ class Home extends Component {
 
     render() {
         if (this.state.loading) {
-            return 'Loading...';
+            return <Loading />;
         }
         else {
             return (
@@ -104,7 +105,9 @@ class Home extends Component {
                             <h1>{featuredList.title}</h1>
                             <div class={classes.sec1}>
                                 {featuredList.movies.map(movie => (
-                                    <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
+                                    <Link to={() => '/movie/' + movie.code}>
+                                        <img class={classes.imgg} src="bg.jpg" width="230" height="300" center />
+                                    </Link>
                                 ))}
                                 <button className="LeftPaddle" style={button}>
                                     <img class={classes.img1} src="https://img.icons8.com/plasticine/50/000000/right.png" />

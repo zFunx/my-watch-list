@@ -2,14 +2,13 @@
     height: 20em;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-family: Yusei_Magic;
     color: #0004;
     margin-bottom: 50px;
 }
 .imgg{
     border-radius: 0mm;
-    margin-right: 20px;
+    margin: 20px;
 }
 .LeftPaddle{
 
