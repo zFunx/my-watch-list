@@ -46,13 +46,10 @@ class Navbar extends Component {
         }
     ];
     state={
-        Search=" ",
-        loading=true
+        Search: "",
+        loading: false
     };
 
-    onChange {
-        
-    };
     render() {  
         if (this.state.loading){
             return <Loading />
@@ -68,7 +65,7 @@ class Navbar extends Component {
 
                     <div class={classes.searchContainer}>
                         <form action="/action_page.php">
-                            <input type="text" placeholder="Search Here." name="search" onChange={this.Search} />
+                            <input type="text" placeholder="Search Here." name="search" onChange={this.props.onSearch} />
                             {/* <button type="submit">Search</button> */}
                         </form>
                     </div>
@@ -76,5 +73,6 @@ class Navbar extends Component {
                 </div>
             )
         }
+    }
 }
 export default Navbar;
