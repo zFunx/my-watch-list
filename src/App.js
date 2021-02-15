@@ -1,7 +1,7 @@
 import './App.css';
 
 import { Route } from 'react-router-dom';
-
+import axios from 'axios';
 import Movie from './pages/Movie/Movie';
 import Home from './pages/Home/Home';
 import Search from './pages/Search/Search';
@@ -16,16 +16,21 @@ class App extends Component {
   search = (event) => {
     const inp = event.currentTarget;
     const q = inp.value;
-
-    // axios
-
-    this.setState({q: q, searchResults: ['inception', 'minions']})
-    console.log('user entered search query');
+	    axios.get('/movie?name_contains={searchResults}')
+		.then(res => {
+			const searchResults=res.data;
+			this.setState({searchResults});
+		})
+	// 	)}
+    // 	.then( response => {
+    //   results: this.setState.searchResults;
+	 this.setState({q: q, searchResults: ['inception', 'minions']})
+    // console.log('user entered search query');
   };
 
   render() {
     let mainPage = <Route exact path="/" component={Home} />;
-    if (this.state.q.length > 0) {
+    if (this.state.searchResults.length > 0) {
       mainPage = <Route exact path="/" render={() => <Search results={this.state.searchResults} />} />;
     }
 

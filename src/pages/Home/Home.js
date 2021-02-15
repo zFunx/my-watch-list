@@ -2,7 +2,8 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-import Loading from '../../UI/Components/Loading/Loading';import classes from './Home.module.css';
+import Loading from '../../UI/Components/Loading/Loading';
+import classes from './Home.module.css';
 
 var button
 
@@ -102,7 +103,7 @@ class Home extends Component {
                     </div> */}
                     {this.state.featuredLists.map(featuredList => (
                         <React.Fragment>
-                            <h1>{featuredList.title}</h1>
+                            <h1>&ensp;{featuredList.title}</h1>
                             <div class={classes.sec1}>
                                 {featuredList.movies.map(movie => (
                                     <Link to={() => '/movie/' + movie.code}>

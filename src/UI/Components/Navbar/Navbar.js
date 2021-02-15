@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Loading from '../../Components/Loading/Loading';
 
+import Search from './../../../pages/Search/Search';
+
 import classes from './Navbar.module.css';
 
 class Navbar extends Component {
@@ -64,8 +66,8 @@ class Navbar extends Component {
                     <a href="#contact">About us</a>
 
                     <div class={classes.searchContainer}>
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search Here." name="search" onChange={this.props.onSearch} />
+                        <form onSubmit={'Search.js'} >
+                            <input type="text" placeholder="Search..." name="search" onChange={this.props.onSearch} />
                             {/* <button type="submit">Search</button> */}
                         </form>
                     </div>
