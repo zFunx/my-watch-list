@@ -1,6 +1,6 @@
 import './App.css';
 
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 import Movie from './pages/Movie/Movie';
 import Home from './pages/Home/Home';
@@ -8,6 +8,8 @@ import Search from './pages/Search/Search';
 import Navbar from './UI/Components/Navbar/Navbar';
 import { Component } from 'react';
 import Login from './admin/Login/Login';
+import AdminHome from './admin/Home/Home';
+import Genres from './admin/Genres/Genres';
 class App extends Component {
 	state = {
 		q: '',// search query
@@ -32,10 +34,21 @@ class App extends Component {
 
 		return (
 			<div className="App">
-				<Navbar onSearch={this.search} />
-				{mainPage}
-				<Route exact path="/movie/:code" component={Movie} />
-				<Route exact path="/admin" component={Login} />
+
+				<Switch>
+					<Route path="/admin">
+						<AdminHome />
+					</Route>
+					<Route path="/">
+						<Navbar onSearch={this.search} />
+						{mainPage}
+						<Route exact path="/movie/:code" component={Movie} />
+					</Route>
+					
+					{/* <Route></Route>
+					<Route></Route>
+					<Route></Route> */}
+				</Switch>
 			</div>
 		);
 	}
