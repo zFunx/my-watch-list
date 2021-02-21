@@ -1,0 +1,13 @@
+.HomePage{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.Side{
+    flex:1;
+    background-color: mediumorchid;
+}
+.Main{
+    flex:4.7; 
+    background-color: mediumpurple;
+}
