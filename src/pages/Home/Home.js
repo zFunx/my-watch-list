@@ -86,21 +86,6 @@ class Home extends Component {
         else {
             return (
                 <React.Fragment>
-                    {/* <div class={classes.scroll}>
-                        <ul class={classes.menu}>
-                            <li class={classes. list}>1</li> 
-                            <li class={classes. list}>2</li> 
-                            <li class={classes. list}>3</li> 
-                            <li class={classes. list}>4</li> 
-                            <li class={classes. list}>5</li> 
-                            <li class={classes. list}>6</li>
-                        </ul>
-                    </div>
-                    <div class="buttons">
-                        <button className="LeftPaddle" style={button}>
-                        <img  class={classes. img1} src="https://img.icons8.com/plasticine/50/000000/right.png"/>
-                        </button>
-                    </div> */}
                     {this.state.featuredLists.map(featuredList => (
                         <React.Fragment>
                             <h1>&ensp;{featuredList.title}</h1>

@@ -1,3 +1,8 @@
-.SidebarContents{
-    /* background-color: mediumspringgreen; */
+tr:nth-child(odd){
+    background-color: #1e498a;
+    color: #b0bec5;
+}
+table{
+    width:100%;
+    font-size: 23px;
 }

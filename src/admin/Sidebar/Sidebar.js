@@ -6,10 +6,12 @@ class Sidebar extends Component {
     render(){
         return (
             <div class={classes.SidebarContents}>
-                <Link to="/admin/movies">All Movies</Link><br/>
-                <Link to="/admin/genres">Genres</Link><br/>
-                <Link to="/admin/countries">Country</Link><br/>
-                <Link to="/admin/platforms">Platforms</Link>
+                <table>
+                    <tr><Link to="/admin/movies">All Movies</Link><br/></tr>
+                    <tr><Link to="/admin/genres">Genres</Link><br/></tr>
+                    <tr><Link to="/admin/countries">Country</Link><br/></tr>
+                    <tr><Link to="/admin/platforms">Platforms</Link></tr>
+                </table>
             </div>
         )
     }

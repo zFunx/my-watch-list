@@ -8,10 +8,9 @@
     display: flex;
     align-items: center;
     color: #0004;
-    margin-bottom: 50px;
 }
 .imgList{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-right: 30px;
     border-radius: 0px;
     margin-left: 20px;
@@ -19,5 +18,4 @@
 .hwon{
     font-size: 50px;
     margin-left: 37%;
-    color:;
 }

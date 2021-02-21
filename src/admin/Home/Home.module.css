@@ -1,13 +1,16 @@
-.HomePage{
+*{
+    font-size: 25px;
+}.HomePage{
     display: flex;
     flex-direction: row;
     align-items: stretch;
 }
 .Side{
     flex:1;
-    background-color: mediumorchid;
+    margin-top: 15px;
 }
 .Main{
     flex:4.7; 
-    background-color: mediumpurple;
+    margin-left: 20px;
+    margin-top: 20px;
 }
