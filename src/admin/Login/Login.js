@@ -1,20 +1,62 @@
 
+import axios from 'axios';
 import React, { Component } from 'react';
 
 import classes from './Login.module.css';
-class Login extends Component { 
-        render() {
-            return(
-                <React.Fragment>
+class Login extends Component {
+    state = {
+        error: false
+    }
+
+    componentDidMount() {
+        this.handleLogin();
+    }
+
+    handleLogin = () => {
+        const username = 'admin';
+        const password = '123456';
+
+        axios.post('/auth/local', {
+            "identifier": username,
+            "password": password
+        })
+            .then(res => {
+                localStorage.authToken = res.data.jwt;
+                // redirect to dashboard /admin
+                console.log('login response', res.data)
+            })
+            .catch(errRes => {
+                console.log('invalid user or password')
+                // show message that  user or password is invalid
+            })
+
+        // credential
+        // "identifier": "admin",
+        //     "password": "123456"
+
+        // invalid user or password response
+        // { "statusCode": 400, "error": "Bad Request", "message": [{ "messages": [{ "id": "Auth.form.error.invalid", "message": "Identifier or password invalid." }] }], "data": [{ "messages": [{ "id": "Auth.form.error.invalid", "message": "Identifier or password invalid." }] }] }
+    }
+
+    // alt + shift + f to align the code
+    render() {
+        return (
+            <React.Fragment>
+                {this.state.error ? <div>Show error</div> : <>
                     Login Page
-                    {/* 
+                    <form onSubmit={this.handleLogin}>
+                        {/* input of username and password */}
+                    </form>
+                </>}
+
+                {/* 
                     1. Check if already logged in
                     2. if not,Show username and password input with login button.
                     3. Store the login token
                     4. Redirect to a dashboard page after logged in
                     */}
-                </React.Fragment>          
-            )
-        }
+            </React.Fragment>
+        )
+    }
 }
 export default Login;

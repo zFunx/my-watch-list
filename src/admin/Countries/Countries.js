@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 import classes from './Countries.module.css';
+import { Redirect } from 'react-router-dom';
 
 class Countries extends Component{
     CList = [
@@ -59,6 +60,7 @@ class Countries extends Component{
     render(){
         return(
             <div class={classes.CList}>
+               {!localStorage.authToken ? <Redirect to="/admin/login" /> : null} 
                Country List
                 <ul>
                     { this.state.CList.map(countries => <li>{countries.name}</li>)}

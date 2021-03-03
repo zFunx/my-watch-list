@@ -11,6 +11,7 @@ class Sidebar extends Component {
                     <tr><Link to="/admin/genres">Genres</Link><br/></tr>
                     <tr><Link to="/admin/countries">Country</Link><br/></tr>
                     <tr><Link to="/admin/platforms">Platforms</Link></tr>
+                    <tr><Link to="/admin/contributers">Contributers</Link></tr>
                 </table>
             </div>
         )
