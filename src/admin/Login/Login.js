@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom';
 
 import classes from './Login.module.css';
 class Login extends Component {
@@ -12,7 +13,7 @@ class Login extends Component {
         this.handleLogin();
     }
 
-    handleLogin = () => {
+    handleLogin = ()   => {
         const username = 'admin';
         const password = '123456';
 
@@ -22,12 +23,12 @@ class Login extends Component {
         })
             .then(res => {
                 localStorage.authToken = res.data.jwt;
-                // redirect to dashboard /admin
+                <Redirect to ="/admin" />
                 console.log('login response', res.data)
             })
             .catch(errRes => {
-                console.log('invalid user or password')
-                // show message that  user or password is invalid
+                console.log('Invalid Username or Password')
+                    alert("Invalid")
             })
 
         // credential
@@ -43,9 +44,19 @@ class Login extends Component {
         return (
             <React.Fragment>
                 {this.state.error ? <div>Show error</div> : <>
-                    Login Page
-                    <form onSubmit={this.handleLogin}>
-                        {/* input of username and password */}
+                    <h1 class={classes.heaDing}>Login Page</h1>
+                    <form class={classes.LoginForm} onSubmit={this.handleLogin}>
+                        <label><br />
+                            <p>Username</p>
+                            <input type="text" placeholder="Username"/>
+                        </label>
+                        <label>
+                            <p>Password</p>
+                            <input type="password" placeholder="Password"/>
+                        </label>
+                        <div>
+                            <button type="submit">Log In</button>
+                        </div>
                     </form>
                 </>}
 
