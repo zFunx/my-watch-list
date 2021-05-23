@@ -1,15 +1,13 @@
-import './App.css';
-
-import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
-import Movie from './pages/Movie/Movie';
+import { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import AdminHome from './admin/Home/Home';
+import './App.css';
 import Home from './pages/Home/Home';
+import Movie from './pages/Movie/Movie';
 import Search from './pages/Search/Search';
 import Navbar from './UI/Components/Navbar/Navbar';
-import { Component } from 'react';
-import Login from './admin/Login/Login';
-import AdminHome from './admin/Home/Home';
-import Genres from './admin/Genres/Genres';
+
 class App extends Component {
 	state = {
 		q: '',// search query

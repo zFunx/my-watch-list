@@ -1,5 +1,11 @@
+:root{
+  --theme-color-dark: #00796B;
+  --theme-color-light: #1DE9B6;
+}
+
 body{
-  background-color: #eeeeee;
+  background: linear-gradient(135deg, var(--theme-color-dark), var(--theme-color-light));
+  background-attachment: fixed;
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
 }

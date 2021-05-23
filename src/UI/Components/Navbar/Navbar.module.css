@@ -1,164 +1,76 @@
-*{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
-}
-* h2,p{
-    text-align: center;
-}
-l:hover{
-    background-color: #eeeeee;
-    border-radius: 70px;
-}
-l b:hover{
-    color: #1e498a;
-}
-u{
-    color:#eeeeee;
-}
-table{
-    text-align: left;
-}
-.table1{
-    display:flex;
-    align-content: stretch;
-}
-.container2{
-    margin:20px;
-    border-radius: 25px;
-    padding:20 px;
-    display: flex;
-
-    }
-.container3{
-    font-size: large;
-    margin:25px;
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    
-}
-.container4{
-    margin:39px;
-    display:flex;
-    flex-direction: column;
-    background-color: #b0bec5 ;
-    border-radius: 25px;
-}
-.container5{
-    margin:39px;
-    display:flex;
-    flex-direction: column;
-    background-color: #b0bec5;
-    border-radius: 25px;
-}
-.c1{
-    flex:1;
-
-}
-.c2{
-    border-radius: 25px;
-    margin:5px;
-    flex:1;
-    background-color: #b0bec5;
-}
-.c2 p, .container4 h3,p, .container5 h3,p, .c3 h3,tr{
-    margin:15px;
-}
-.table2 tr, .container4 h2,p, .container5 h2,p, .c3 h2
-{
-    margin:15px;
-    color: black;
-}
-.table2 th:nth-child(1){
-    transform: rotate(270deg);
-    text-align: center;
-}
-.c3{
-    flex:1;
-    border-radius: 25px;
-    margin:5px;
-    background-color: #b0bec5;
-}
-
-img{
-
-    border-radius: 20px;
-}
-img:hover{
-    border-radius: 4px;
-    font-weight: normal;
-    background-color: #607d8b;
-}
 .topnav {
-    margin:16px;
+    margin: 32px;
     display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    background-color: #1e498a ;
-    }
-b{
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 23px;
-    font-family: 'Courier New', Courier, monospace;   
+    justify-content: space-between;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 32px;
 }
 .topnav a {
-    flex-direction: row;
-    float: left;
-    display: block;
-    color: #eeeeee;
-    text-align: center;
-    padding: 14px 16px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 16px 32px;
     text-decoration: none;
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.75);
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.topnav a > i {
+    margin-right: 8px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.topnavLHS a {
+    margin-left: -16px;
+}
+.topnavLHS a:first-child {
+    margin-left: 0;
 }
 .topnav a:hover {
-    background-color: #eeeeee;
-    color: #1e498a;
-    border-radius: 180px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 .topnav a.active {
     color: white;
 }
-.topnav .searchContainer {
-    float: right;
+
+.searchContainer {
+    display: inline-block;
 }
-.topnav input[type=text] {
-    background-color: #eceff1;
-    padding: 8px;
-    margin-top: 8px;
-    font-size: 17px;
+.searchContainer input[type="text"] {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 8px 24px;
+    color: rgba(255, 255, 255, 0.75);
+    transform: translateY(-2px);
 }
-.topnav .searchContainer button {
-    margin: 5px;
-    align-self:flex-end;
-    border-radius: 25px;
-    padding: 10px 12px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #607d8b ;
-    font-size: 17px;
-    border: 2px red;
-    cursor: pointer;
-    color: black;
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.35);
+    opacity: 1; /* Firefox */
 }
-.topnav .searchContainer button:hover {
-    background: #eceff1;
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.35);
 }
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.35);
+}
+
 @media screen and (max-width: 600px) {
     .topnav .searchContainer {
-        float: none;    
+        float: none;
+    }
+    .topnav a,
+    .topnav input[type="text"],
+    .topnav .searchContainer button {
+        float: right;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
 }
-.topnav a, .topnav input[type=text], .topnav .searchContainer button {
-    float: right;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-}
-}
-  
